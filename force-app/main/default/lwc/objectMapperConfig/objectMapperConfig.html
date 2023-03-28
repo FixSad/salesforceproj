@@ -1,0 +1,34 @@
+<template>
+    <lightning-card title="qwerty"></lightning-card>
+
+
+    
+
+    <div>
+        <select name = "optionSelect" onchange={changeHandler}>
+            <template  for:each={record} for:item="acc">
+                <option key={acc.Id} value={acc.objectApiName}>{acc.objectApiName}</option>
+            </template>
+        </select>
+        <div>
+            <template  for:each={record1} for:item="rec">
+                <p key={rec.Id}>{rec.description}</p>
+            </template>
+        </div>
+    </div>
+
+    <div>
+        <select name = "secondOptionSelect" onchange={сhangeHandler2}>
+            <template  for:each={secondRecord} for:item="acc">
+                <option key={acc.Id} value={acc.objectApiName}>{acc.objectApiName}</option>
+            </template>
+        </select>
+        <div>
+            <template  for:each={secondFields} for:item="rec">
+                <p key={rec.Id}>{rec.description}</p>
+            </template>
+        </div>
+    </div>
+   
+
+</template>
